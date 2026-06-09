@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Premium Graphical UI/UX - Apple + Elon Musk team level
+   + Trust & Authority design system (ui-ux-pro-max)
+   Modern fonts, light/dark, major visual improvements
+   ============================================ */
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --accent: #0369a1;
+  --accent-hover: #0284c8;
+  --success: #10b981;
+}
+
+.dark {
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+}
+
+/* Base typography & polish */
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, .section-title, .font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "tnum" "ss01";
+}
+
+/* High-end section & component styles */
+.section {
+  scroll-margin-top: 5rem;
+}
+
+.section-title {
+  @apply text-4xl md:text-[42px] font-semibold tracking-[-0.035em] leading-[1.05] mb-4;
+}
+
+.section-subtitle {
+  @apply text-[15px] leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-[560px];
+}
+
+.card {
+  @apply bg-white dark:bg-[#111418] border border-zinc-200 dark:border-[#253043] rounded-3xl p-7 transition-all duration-200 hover:border-[var(--accent)] hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/40;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-[13px] rounded-2xl bg-[var(--accent)] text-white font-semibold text-sm tracking-[-0.01em] hover:bg-[var(--accent-hover)] active:scale-[0.985] transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#0a0c10] focus:ring-[var(--accent)];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-[13px] rounded-2xl border border-zinc-200 dark:border-[#253043] text-zinc-700 dark:text-zinc-200 font-medium text-sm hover:bg-zinc-50 dark:hover:bg-[#1a1f26] transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#0a0c10] focus:ring-zinc-400;
+}
+
+/* Graphical Ribbon-style Nav (premium feel) */
+.ribbon-tab {
+  @apply px-5 py-1.5 text-sm font-medium rounded-2xl transition-all;
+}
+
+.ribbon-tab.active {
+  @apply bg-zinc-900 text-white dark:bg-white dark:text-[#0a0c10] shadow-sm;
+}
+
+/* Major graphical service cards */
+.service-card {
+  @apply bg-white dark:bg-[#111418] border border-zinc-200 dark:border-[#253043] rounded-3xl p-7 transition-all duration-200 hover:-translate-y-[1px] hover:border-[var(--accent)] hover:shadow-lg;
+}
+
+.service-icon-wrap {
+  @apply w-12 h-12 rounded-2xl flex items-center justify-center mb-6;
+  background: linear-gradient(135deg, rgba(3,105,161,0.12), rgba(3,105,161,0.04));
+}
+
+/* Experience / Project cards - rich graphical */
+.exp-card {
+  @apply bg-white dark:bg-[#111418] border border-zinc-200 dark:border-[#253043] rounded-3xl p-7 flex flex-col transition-all hover:shadow-md;
+}
+
+.status-pill {
+  @apply inline-block text-[11px] font-medium px-3 py-0.5 rounded-full;
+}
+
+.status-pill.completed { @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400; }
+.status-pill.in-progress { @apply bg-blue-100 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400; }
+
+/* Contact methods - graphical cards */
+.contact-method {
+  @apply flex items-start gap-4 p-6 bg-white dark:bg-[#111418] border border-zinc-200 dark:border-[#253043] rounded-3xl hover:border-[var(--accent)] transition-all;
+}
+
+/* Pro form styling */
+.form-input {
+  @apply w-full bg-zinc-50 dark:bg-[#0a0c10] border border-zinc-200 dark:border-[#253043] rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-zinc-400;
+}
+
+/* Small graphical accents */
+.trust-stat {
+  @apply text-sm text-zinc-500 dark:text-zinc-400;
+}
+
+.trust-stat strong {
+  @apply block text-base font-semibold text-zinc-900 dark:text-white tracking-tight;
+}
+
+/* Footer polish */
+.footer-link {
+  @apply text-sm text-zinc-500 hover:text-[var(--accent)] transition-colors;
+}
